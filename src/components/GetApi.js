@@ -43,7 +43,7 @@ function GetApi() {
                 <input type='text' value={input} onChange={handleChange}></input>
                 {!isPending && <button id="btn-get" onClick={handleClick}>Ieškoti</button>}
                 {isPending && <button id="btn-get" disabled>Ieškoma...</button>}
-                {response.type === 'error' && <p>Nieko nerasta</p>}
+                {response.type === 'error' && <div className="nothing"><p>Nieko nerasta... </p><p>Bandykite įvesti kitą veislę</p></div>}
                 {response.type === 'success' &&
                     <div>
                         <img src={response.data} alt='dog'></img>
